@@ -13,5 +13,5 @@ reset.onclick=function(){
 }
 decrease.onclick=function(){
     count--;
-    countlabel.textContent=count;
+    countlabel.textContent=count
 }
