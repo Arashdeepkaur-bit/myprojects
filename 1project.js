@@ -5,7 +5,7 @@ const countlabel=document.getElementById("countlabel");
 let count=0;
 increase.onclick=function(){
     count++;
-    countlabel.textContent=count;
+    countlabel.innerHTML=count;
 }
 reset.onclick=function(){
     count=0;
