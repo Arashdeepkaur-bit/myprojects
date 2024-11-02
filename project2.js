@@ -22,9 +22,19 @@ function fun1(){
     const display=document.getElementById("calculator");
     display.value=Math.sqrt(display.value)
 }
-function power(value1){
-     const display = document.getElementById("calculator");
-   display.value=Math.pow(display.value,2);
+
+function solve() {
+    const display = document.getElementById("calculator");
+    try {
+        const a = display.value.replace(/\^/g, '**');
+        display.value = eval(a);
+    } catch (error) {
+        display.value = "Error";
+    }
 }
+function power(){
+      const display = document.getElementById("calculator");
+       display.value +="^"
+     }
 
 
