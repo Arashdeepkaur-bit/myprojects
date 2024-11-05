@@ -9,11 +9,11 @@ function cleardisplay() {
     display.value = ""; 
 }
 
-// function solve() {
+function fun2() {
     
-
-//         display.value = eval(display.value); 
-// }
+display.value=display.value.replace("%","/100")
+        display.value = eval(display.value); 
+}
 
 function back() {
     
@@ -21,8 +21,8 @@ function back() {
 }
 function fun1(){
 
-    display.value=display.value.replace("Math.sqrt","√")
-    display.value=eval(display.value)
+    display.value=display.value.replace("√","Math.sqrt()")
+    display.value=Math.sqrt(display.value)
 }
 
 function power(){
@@ -37,6 +37,9 @@ function solve(){
     }
     else if(x.includes("√")){
         fun1()
+    }
+    else if(x.includes("%")){
+        fun2()
     }
     else{
         display.value= eval(display.value); 
