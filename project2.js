@@ -1,4 +1,4 @@
-const display = document.getElementById("calculator");
+ display = document.getElementById("calculator");
 function fun(value) {
     
     display.value += value; 
@@ -9,11 +9,11 @@ function cleardisplay() {
     display.value = ""; 
 }
 
-function solve() {
+// function solve() {
     
 
-        display.value = eval(display.value); 
-}
+//         display.value = eval(display.value); 
+// }
 
 function back() {
     
@@ -21,20 +21,27 @@ function back() {
 }
 function fun1(){
 
-    display.value=Math.sqrt(display.value)
+    display.value=display.value.replace("Math.sqrt","√")
+    display.value=eval(display.value)
 }
 
-function solve() {
-    try {
-        const a = display.value.replace(/\^/g, '**');
-        display.value = eval(a);
-    } catch (error) {
-        display.value = "Error";
-    }
-}
 function power(){
-    //   const display = document.getElementById("calculator");
-       display.value +="^"
-     }
+
+    display.value=display.value.replace("^","**");
+    display.value=eval(display.value)
+}
+function solve(){
+    let x=document.getElementById("calculator").value;
+    if(x.includes("^")){
+        power()
+    }
+    else if(x.includes("√")){
+        fun1()
+    }
+    else{
+        display.value= eval(display.value); 
+}
+    }
+
 
 
