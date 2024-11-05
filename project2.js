@@ -21,7 +21,7 @@ function back() {
 }
 function fun1(){
 
-    display.value=display.value.replace("√","Math.sqrt()")
+    display.value=display.value.replace("√"," ")
     display.value=Math.sqrt(display.value)
 }
 
